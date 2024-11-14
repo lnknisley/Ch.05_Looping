@@ -1,9 +1,9 @@
-'''
+"""
 CAMEL GAME
 ----------
 The pseudo-code for how to code this game is in Chapter 5 of the Python Jedi book
 
-'''
+"""
 import random
 import time
 
@@ -14,7 +14,7 @@ time.sleep(1.66)
 print("The cold Rocky Mountains are no friend to us human souls.")
 time.sleep(2)
 print("At last, you have no other option than to persevere.")
-time.sleep(2.5)
+time.sleep(2.33)
 
 class Perspective:
     def __init__(self):
@@ -37,7 +37,7 @@ class Perspective:
             print("I recommend you exert yourself.")
 
     def temp(self):
-        blizzard = random.randint(1, 46)
+        blizzard = random.randint(1, 25)
         if blizzard == 23:
             print("Some are just unable to handle the extremities of a blizzard.")
             self.done = True
@@ -47,7 +47,7 @@ class Perspective:
         print(poems[random.randint(0, len(poems) - 1)])
 
     def encounter(self):
-        scenario = random.randint(0, 15)
+        scenario = random.randint(0, 11)
         if scenario == 0:
             print("You encounter an ole shack in your path. Inside is a barrel of a clear liquid.")
             action = input("A: Fill your flask\nB: Return to your path\nF: Forfeit\n")
@@ -108,7 +108,7 @@ class Perspective:
                 time.sleep(1)
             elif action.upper() == "F":
                 self.done = True
-        elif scenario == 10:
+        elif scenario == 5:
             print("The fountain of youth lies in your gaze.")
             action = input("A: Collect its treasure\nB: Return to your path\nF: Forfeit\n")
             if action.upper() == "A":
@@ -122,7 +122,7 @@ class Perspective:
                 time.sleep(1)
             elif action.upper() == "F":
                 self.done = True
-        elif scenario == 11:
+        elif scenario == 7:
             self.temp()
 
 game = Perspective()
